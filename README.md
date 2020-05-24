@@ -1,4 +1,5 @@
 # Anngler
+[![Build Status](https://travis-ci.com/Aidenjl193/anngler.svg?branch=master)](https://travis-ci.com/Aidenjl193/anngler)
 
 Anngler is an approximate nearest neighbor search for points in n-dimensional space that are close in terms of cosine distance to a given point. The gem is built with serverless architecture in mind with Redis but it also offers a local in-memory storage.
 
