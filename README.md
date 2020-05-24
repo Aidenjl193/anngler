@@ -26,7 +26,7 @@ index = Anngler::Index.new("bucket_name", 7, 30)
 vec = Numo::DFloat.new(30).rand
 index.add(vec, label: "label_name")
 
-# query the index (this will return all of the vectors hashed into the same bucket)
+# query the index (this will return all of the vectors hashed into the same bucket sorted by cosine distance)
 index.query(vec)
 # [{"label"=>"label_name", "vec"=>Numo::DFloat#shape=[30][-0.276791, 0.828535, 0.010036, 0.874997, -0.169577, -0.0180099, 0.266599, ...]}]
 ```
