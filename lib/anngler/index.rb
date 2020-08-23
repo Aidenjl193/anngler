@@ -1,7 +1,7 @@
 require 'json'
 require 'base64'
 require 'zlib'
-require 'numo-narray'
+require "numo/narray"
 
 module Anngler
     class Index

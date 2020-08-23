@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
     s.name = 'anngler'
-    s.version = '0.0.1'
+    s.version = '0.0.2'
     s.date = '2020-05-20'
-    s.summary = 'A ruby locality sensitive hashing implementation using Redis for storage'
+    s.summary = 'Anngler is an approximate nearest neighbor search for points in n-dimensional space that are close in terms of cosine distance to a given point. The gem is built with serverless architecture in mind with Redis but it also offers a local in-memory storage.'
 
     s.authors = ['Aiden Leeming']
 
