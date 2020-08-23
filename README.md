@@ -48,7 +48,7 @@ require "redis"
 redis = Redis.new(url: "redis://:p4ssw0rd@10.0.1.1:6380/15")
 
 # create a the redis backend
-storage = Anngler::Storage::RedisBackend(redis)
+storage = Anngler::Storage::RedisBackend.new(redis)
 
 index = Anngler::Index.new("bucket_name", 7, 30, storage: storage)
 ```
