@@ -99,7 +99,7 @@ module Anngler
 
         #return a hash key for each tree
         def calc_hashes(vec)
-            [0..@n_trees - 1].map do |i|
+            (0..@n_trees - 1).map do |i|
                 vec.dot(@trees[i, true, true]).ge(0.0)
             end
         end
