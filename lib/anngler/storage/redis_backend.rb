@@ -12,9 +12,9 @@ module Anngler
                 @instance.lpush(bucket, data)
             end
 
-            def remove_vector(bucket, encoded_vec)
+            def remove_vector(bucket, data)
                 @instance.lrange(bucket, 0, -1).each do |val|
-                    if(val.split(":")[0] == encoded_vec)
+                    if(val == data)
                         @instance.lrem(bucket, 0, val)
                         return
                     end

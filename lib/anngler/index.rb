@@ -61,13 +61,13 @@ module Anngler
             end
         end
 
-        def remove(vec)
+        def remove(vec, label: "")
             hashes = calc_hashes(vec)
 
             #remove vector from each tree
             hashes.each_with_index do |hash, i|
                 bucket = "#{@bucket_name}:#{i}:#{hash2string(hash)}"
-                @storage.remove_vector(bucket, encode_vec(vec))
+                @storage.remove_vector(bucket, pack_data(vec, label))
             end
         end
 

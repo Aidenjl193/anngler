@@ -9,9 +9,9 @@ module Anngler
                 @storage[bucket] = [data] + @storage[bucket]
             end
 
-            def remove_vector(bucket, encoded_vec)
+            def remove_vector(bucket, data)
                 @storage[bucket] = @storage[bucket].reject do |encoded_str|
-                    encoded_str.split(":")[0] == encoded_vec
+                    encoded_str == data
                 end
             end
 

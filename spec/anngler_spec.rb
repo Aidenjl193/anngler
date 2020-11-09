@@ -22,7 +22,7 @@ describe Anngler do
             vals = Array.new(n_features) { rng.rand }
             vec = Numo::DFloat.asarray(vals)
             index.add(vec, label: "test")
-            index.remove(vec)
+            index.remove(vec, label: "test")
             expect(index.query(vec).map{ |res| res["label"] }).not_to include("test")
         end
     end
@@ -42,7 +42,7 @@ describe Anngler do
             vals = Array.new(n_features) { rng.rand }
             vec = Numo::DFloat.asarray(vals)
             index.add(vec, label: "test")
-            index.remove(vec)
+            index.remove(vec, label: "test")
             expect(index.query(vec).map{ |res| res["label"] }).not_to include("test")
         end
     end
